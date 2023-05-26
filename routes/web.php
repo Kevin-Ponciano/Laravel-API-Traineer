@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/cambio', function () {
+    return view('cambio');
+})->name('cambio');
+
+Route::get('/horoscopo', function () {
+    return view('horoscopos');
+})->name('horoscopo');
+
+Route::get('/horoscopo/{signo}', function ($signo) {
+    return view('signo', ['signo' => $signo]);
+})->name('horoscopo.signo');

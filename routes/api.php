@@ -3,6 +3,7 @@
 use App\Http\Controllers\API\HoroscopesController;
 use App\Http\Controllers\API\TokenGeneratorController;
 use App\Http\Controllers\API\WalletController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
@@ -12,7 +13,17 @@ Route::fallback(function () {
 });
 
 // Gera e retorna tokens para todos os usuários
-Route::get('/token', TokenGeneratorController::class);
+Route::get('/gerar-token', TokenGeneratorController::class);
+
+// Retorna todos os tokens
+Route::get('/tokens', function () {
+    $users = User::all();
+    $apiKeys = $users->map(function ($user) {
+        return $user->token;
+    });
+    return response()->json($apiKeys);
+});
+
 
 // Retorna todas as rotas da API
 Route::get('/api-routes', function () {
@@ -62,9 +73,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 # ----------------------------API HOROSCOPO---------------------------- #
 
 # ----------------------------API CRIPTOMOEDA ---------------------------- #
-    // Retorna o valor da criptomoeda
-    //Route::get('/criptomoeda/{coin}', [WalletController::class, 'getCoin']);
-
     // Retorna todas as carteiras
     Route::get('/criptomoeda/carteiras', [WalletController::class, 'getWallets']);
 
@@ -92,5 +100,6 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     // Retorna o histórico de todas as transações das carteiras do usuário
     Route::get('/criptomoeda/meu_blockchain', [WalletController::class, 'getHistoryTransitionsUser']);
 
-    Route::post('/criptomoeda/teste', [WalletController::class, 'teste']);
+# ----------------------------API CRIPTOMOEDA ---------------------------- #
+
 });

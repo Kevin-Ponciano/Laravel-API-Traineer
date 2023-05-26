@@ -17,6 +17,8 @@ class TokenGeneratorController extends Controller
                 'name' => $user->name,
                 'token' => $token,
             ];
+            $user->token = $token;
+            $user->save();
         }
         return $tokens;
     }

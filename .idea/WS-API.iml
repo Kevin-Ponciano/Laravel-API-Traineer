@@ -12,8 +12,17 @@
       <excludeFolder url="file://$MODULE_DIR$/storage/app" />
       <excludeFolder url="file://$MODULE_DIR$/storage/framework" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/_laravel_idea" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/maximebf/debugbar" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/debugbar" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Chart.js" level="application" />
+    <orderEntry type="library" name="flowbite" level="application" />
+    <orderEntry type="library" name="tw-elements" level="application" />
+    <orderEntry type="library" name="flowbite" level="application" />
+    <orderEntry type="library" name="chart.js" level="application" />
   </component>
 </module>
