@@ -14,6 +14,8 @@
 #### ATV-03
 - resources/views/cambio.blade.php
 
+#### Diagrama do Banco de Dados
+![Diagrama do Banco de Dados](database/Diagrama do Banco de Dados.png)
 
 ## Github
 https://github.com/Kevin-Ponciano/Laravel-API-Traineer
