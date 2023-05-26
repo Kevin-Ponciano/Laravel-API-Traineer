@@ -3,19 +3,19 @@
 
 ## Arquivos utilizados para atividade
 #### ATV-01
-- app/Http/Controllers/API/HoroscopesController.php
-- resources/views/signo.blade.php
-- resources/views/horoscopos.blade.php
-- python/client-python.py
+- [HoroscopesController](app/Http/Controllers/API/HoroscopesController.php)
+- [signo view](resources/views/signo.blade.php)
+- [horoscopo view](resources/views/horoscopos.blade.php)
+- [API Consumer in Python](python/client-python.py)
 
 #### ATV-02
-- app/Http/Controllers/API/WalletController.php
+- [WalletController](app/Http/Controllers/API/WalletController.php)
 
 #### ATV-03
-- resources/views/cambio.blade.php
+- [Cambio view](resources/views/cambio.blade.php)
 
 #### Diagrama do Banco de Dados
 ![Diagrama do Banco de Dados](database/Diagrama-do-Banco-de-Dados.png)
 
 ## Github
-https://github.com/Kevin-Ponciano/Laravel-API-Traineer
+[WS-API Laravel](https://github.com/Kevin-Ponciano/Laravel-API-Traineer)
