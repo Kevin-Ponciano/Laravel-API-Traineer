@@ -13,8 +13,8 @@ return new class extends Migration {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-//            $table->string('api_token')->nullable();
-//            $table->enum('plan', ['basic', 'premium'])->default('basic');
+            $table->string('api_token')->nullable();
+            $table->enum('plan', ['basic', 'premium'])->default('basic');
             $table->string('birthday',10);
             $table->timestamps();
         });
