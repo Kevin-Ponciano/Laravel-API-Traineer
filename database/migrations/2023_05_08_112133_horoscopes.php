@@ -11,6 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('horoscopes', function (Blueprint $table) {
+            $table->id();
             $table->enum('signo', [
                 1 => 'Capricórnio', 2 => 'Aquário', 3 => 'Peixes',
                 4 => 'Áries', 5 => 'Touro', 6 => 'Gêmeos',
