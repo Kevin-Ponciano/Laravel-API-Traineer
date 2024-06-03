@@ -31,8 +31,11 @@ services:
 
     mysql:
         image: mysql:8.0
+        hostname: mysql.laravix.com.br
         networks:
-            - traefik_public
+            traefik_public:
+                aliases:
+                    - mysql.laravix.com.br
         deploy:
             labels:
                 - "traefik.enable=false"
