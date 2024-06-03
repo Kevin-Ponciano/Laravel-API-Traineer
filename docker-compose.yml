@@ -40,10 +40,10 @@ services:
             labels:
                 - "traefik.enable=false"
         environment:
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-            MYSQL_DATABASE: ${DB_DATABASE}
-            MYSQL_USER: ${DB_USERNAME}
-            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_ROOT_PASSWORD: WQksBRFpeK6W
+            MYSQL_DATABASE: laravel_api_trainee
+            MYSQL_USER: postgres
+            MYSQL_PASSWORD: WQksBRFpeK6W
         volumes:
             - mysql-data:/var/lib/mysql
         restart: always
