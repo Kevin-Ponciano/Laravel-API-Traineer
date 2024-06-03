@@ -11,12 +11,11 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('horoscopes', function (Blueprint $table) {
-            $table->id();
             $table->enum('signo', [
                 1 => 'Capricórnio', 2 => 'Aquário', 3 => 'Peixes',
                 4 => 'Áries', 5 => 'Touro', 6 => 'Gêmeos',
                 7 => 'Câncer', 8 => 'Leão', 9 => 'Virgem',
-                10 => 'Libra', 11 => 'Escorpião', 12 => 'Sagitário']);
+                10 => 'Libra', 11 => 'Escorpião', 12 => 'Sagitário'])->primary();
 
             $table->string('message_basic', 500);
             $table->string('work_basic', 1000);

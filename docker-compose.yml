@@ -28,6 +28,26 @@ services:
                     memory: 3G
             restart_policy:
                 condition: on-failure
+
+    mysql:
+        image: mysql:8.0
+        networks:
+            - traefik_public
+        deploy:
+            labels:
+                - "traefik.enable=false"
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+        volumes:
+            - mysql-data:/var/lib/mysql
+        restart: always
+
+volumes:
+    mysql-data:
+
 networks:
     traefik_public:
         external: true
