@@ -45,11 +45,11 @@ services:
             MYSQL_USER: postgres
             MYSQL_PASSWORD: WQksBRFpeK6W
         volumes:
-            - mysql-data:/var/lib/mysql
+            - mysql-data2:/var/lib/mysql
         restart: always
 
 volumes:
-    mysql-data:
+    mysql-data2:
 
 networks:
     traefik_public:
