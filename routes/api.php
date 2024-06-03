@@ -98,7 +98,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/criptomoeda/blockchain', [WalletController::class, 'getHistoryTransitions']);
 
     // Retorna o histórico de todas as transações das carteiras do usuário
-    Route::get('/criptomoeda/meu_blockchain', [WalletController::class, 'getHistoryTransitionsUser']);
+    Route::get('/criptomoeda/meu_blockchain', [WalletController::class, 'getUserHistoryTransitions']);
 
 # ----------------------------API CRIPTOMOEDA ---------------------------- #
 
