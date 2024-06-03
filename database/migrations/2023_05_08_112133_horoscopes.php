@@ -16,7 +16,7 @@ return new class extends Migration {
                 1 => 'Capricórnio', 2 => 'Aquário', 3 => 'Peixes',
                 4 => 'Áries', 5 => 'Touro', 6 => 'Gêmeos',
                 7 => 'Câncer', 8 => 'Leão', 9 => 'Virgem',
-                10 => 'Libra', 11 => 'Escorpião', 12 => 'Sagitário'])->primary();
+                10 => 'Libra', 11 => 'Escorpião', 12 => 'Sagitário']);
 
             $table->string('message_basic', 500);
             $table->string('work_basic', 1000);
