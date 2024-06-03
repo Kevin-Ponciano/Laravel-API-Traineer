@@ -9,7 +9,6 @@ class HoroscopesSeeder extends Seeder
 {
     public function run(): void
     {
-        Horoscopes::truncate();
         $horoscopes = [
             // Capricórnio
             [

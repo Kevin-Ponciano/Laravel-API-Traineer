@@ -18,7 +18,6 @@ class UserSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        User::truncate();
         $users = [
             [
                 'name' => 'Kevin',
