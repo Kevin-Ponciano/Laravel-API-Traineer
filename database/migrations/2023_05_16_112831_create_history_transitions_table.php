@@ -15,10 +15,10 @@ class CreateHistoryTransitionsTable extends Migration
             $table->string('description');
 
             $table->bigInteger('from_wallet_id')->unsigned();
-            $table->foreign('from_wallet_id')->references('id')->on('wallets');
+            $table->foreign('from_wallet_id')->references('id')->on('wallets')->onDelete('cascade');
 
             $table->bigInteger('to_wallet_id')->unsigned()->nullable();
-            $table->foreign('to_wallet_id')->references('id')->on('wallets');
+            $table->foreign('to_wallet_id')->references('id')->on('wallets')->onDelete('cascade');
 
             $table->timestamps();
         });
